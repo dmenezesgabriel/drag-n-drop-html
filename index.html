@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="assets/static/js/bootstrap.min.js"></script>
+  <script src="index.js"></script>
+  <title>Document</title>
+</head>
+<body>
+
+  <div class="container bg-light center p-5 mt-5">
+    <div id="parent" class="row border border-primary rounded p-5 m-3">
+      <div class="col-sm">
+        <div
+          id="todo"
+          class="card h-100 p-3 text-center"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);">
+          <div class="card-content">
+            <div class="card-header d-flex justify-content-center p">
+              <div class="card-title m-auto">
+                <h2>Todo</h2>
+              </div>
+              <button class="btn btn-success h-25 w-25">
+                +
+              </button>
+            </div>
+            <!-- Task Component -->
+            <span
+              id="draggableSpan"
+              class="card mt-3 mb-3"
+              draggable="true"
+              ondragstart="onDragStart(event);">
+              <div class="card-content p-3 text-center">
+                <p>Todo 2</p>
+              </div>
+            </span>
+            <!-- Task Component -->
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div
+          id="inProgress"
+          class="card h-100 p-3 text-center"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="card-title">
+                <h2>In Progress</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm">
+        <div
+          id="done"
+          class="card h-100 p-3 text-center"
+          ondragover="onDragOver(event);"
+          ondrop="onDrop(event);">
+          <div class="card-content">
+            <div class="card-header">
+              <div class="card-title">
+                <h2>Done</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
